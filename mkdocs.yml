@@ -2,5 +2,4 @@ site_name: OpenESG Docs
 site_url: https://openesg-documentation.readthedocs.io/
 nav:
     - Home: index.md
-docs_dir: .
 theme: readthedocs
