@@ -1,6 +1,6 @@
-# Authorization
+# OpenESG API
 
-## Retrieving acesses credentials
+## Retrieving access credentials
 
 You'll need your registered oAuth applications `client_id` and `client_secret`.
 
@@ -11,7 +11,7 @@ curl -u '<client_id>:<client_secret>' \
      -d "grant_type=client_credentials"
 ```
 
-gives you
+This gives us the access token.
 
 ```json
 {
@@ -77,11 +77,11 @@ else:
 
 ## Report Templates
 
-Report templates define the structure of reports and associated data. Template details are available at the `/sections`
-path.
+Report templates define the structure of reports and associated data. Templates details are available at the `/sections`
+actions, and not returned with the main resource .
+
 Reports are created based on one of the predefined templates. Available templates may vary based on organization, they
-are
-specific to the currently authorized organization.
+are specific to the currently authorized organization.
 
 ```python
 # Get existing report templates
@@ -116,8 +116,8 @@ report = session.post(
 ).json()
 ```
 
-Meta-data on the meaning of the different report fields are provided by the report template sections. It is possible
-to look up the field values type definition from the template sections.
+Meta-data on the meaning of the different report fields is provided by the report templates sections.
+For every field value there is a corresponding type definition within the template sections.
 
 ```python
 # Make meta data accessible on 'field_type_id'
@@ -128,8 +128,6 @@ for section in sections:
 ```
 
 In order to update report values the `PATCH` method is supplied with any field values, that need updates.
-
-NB: here we are filling field values with dummy data based on field type definitions.
 
 ```python
 # prepare report values
@@ -154,3 +152,4 @@ report = session.patch(
     },
 ).json()
 ```
+In this example, we were setting field values with dummy data based on field type definitions.
