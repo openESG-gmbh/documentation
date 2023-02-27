@@ -86,11 +86,22 @@ are specific to the currently authorized organization.
 ```python
 # Get existing report templates
 template = session.get(f"{api_base}/api/report-templates/").json()[0]
+```
 
-# Get template details
-sections = session.get(
-    f"{api_base}/api/report-templates/{template['id']}/sections"
-).json()
+Example response:
+```json 
+{
+    "id": 1,
+    "organization": null,
+    "key": "esg.reporting_standard",
+    "name": "ESG Reporting",
+    "description": "Standard ESG Reporting",
+    "catalogue": {
+        "id": 1,
+        "key": "esg_base",
+        "name": "ESG Base"
+    }
+}
 ```
 
 ### Sections
@@ -103,7 +114,78 @@ in serialized JSON.
 Sections do define field types, which are the definition of a fields structure and semantics. The field type defines a
 technical `key`, the `metric_type` and possible `measurements`.
 
-## Report
+### Retrieving sections and field types
+
+```python
+# Get template details
+sections = session.get(
+    f"{api_base}/api/report-templates/{template['id']}/sections"
+).json()
+```
+
+Example response:
+```json 
+[
+    ...,
+    {
+        "id": 2,
+        "key": "esg.environment",
+        "name": "Umwelt",
+        "description": "Lorem Ipsum",
+        "is_commentable": true,
+        "multi_instance": false,
+        "field_types": [],
+        "parent_id": 1
+    },
+    {
+        "id": 3,
+        "key": "esg.environment.electricity",
+        "name": "Stromverbrauch",
+        "description": "",
+        "is_commentable": true,
+        "multi_instance": false,
+        "field_types": [
+            {
+                "id": 1,
+                "key": "esg.environment.electricity",
+                "name": "Stromverbrauch",
+                "label": "kWh",
+                "metric_type": {
+                    "id": 4,
+                    "key": "electricity.amount",
+                    "name": "Energy",
+                    "datatype": "decimal",
+                    "units": [
+                        {
+                            "id": 2,
+                            "key": "electricity.kwh",
+                            "name": "kWH"
+                        }
+                    ]
+                },
+                "measurements": [
+                    {
+                        "id": 2,
+                        "key": "estimation",
+                        "name": "Estimation"
+                    },
+                    {
+                        "id": 3,
+                        "key": "measurement",
+                        "name": "Measurement"
+                    }
+                ],
+                "attachment": "optional",
+                "is_commentable": true,
+                "required": true
+            }
+        ],
+        "parent_id": 2
+    },
+```
+
+
+## Submitting a Report
 
 Reports are the entities, that group submitted field values into a logical collection, they are created from a template,
 using the `/from_template` action.
@@ -119,6 +201,51 @@ report = session.post(
 Meta-data on the meaning of the different report fields is provided by the report templates sections.
 For every field value there is a corresponding type definition within the template sections.
 
+Example response:
+```json
+{
+    "id": 14,
+    "template": 1,
+    "status": "requested",
+    "completion_pct": 0,
+    "submitted_at": null,
+    "organization": {
+        "id": 9,
+        "name": "Test Client",
+        "...": "..."
+    },
+    "field_values": [
+        {
+            "id": 261,
+            "organization": 9,
+            "value": null,
+            "value_complex": null,
+            "comment": "",
+            "measurement": null,
+            "attachment": null,
+            "instance_id": 1,
+            "valid": false,
+            "required": true,
+            "section": 3,
+            "field_type": 1
+        },
+        {
+            "id": 262,
+            "organization": 9,
+            "value": null,
+            "value_complex": null,
+            "comment": "",
+            "measurement": null,
+            "attachment": null,
+            "instance_id": 1,
+            "valid": false,
+            "required": true,
+            "section": 4,
+            "field_type": 2
+        }
+```
+
+Here we create a 'helper' structure, to look up meta-data for each field type id:
 ```python
 # Make meta data accessible on 'field_type_id'
 field_types = {}
@@ -153,3 +280,57 @@ report = session.patch(
 ).json()
 ```
 In this example, we were setting field values with dummy data based on field type definitions.
+
+## Requesting a report
+
+We may choose to request a report based on the available templates. In order to submit a report request, we need to 
+supply company and contact information.
+
+```python
+# Create report request
+request = session.post(
+    f"{api_base}/api/report-requests/for-organization/",
+    json={
+        "report_template": template["id"],
+        "company_name": "Mustermann GmbH",
+        "vat_id": "DE12312312", #optional
+        "scoped_external_data": {"my_customer_id": "123123"}, #optional
+        "user_email": "max@mustermann.de",
+        "user_first_name": "Max",
+        "user_last_name": "Mustermann",
+    },
+).json()
+print(json.dumps(request, indent=2))
+```
+
+The submitted report has a `report_request_code` and `registration_code`, the `registration_code` will be supplied to the provided
+contact, to finalize the registration. It will be `null`, if the supplied contact is already registered.
+
+By default, a registration email will be sent to the supplied contact. 
+
+```json
+{
+  "report_request": {
+    "id": 13,
+    "organization": {
+      "id": 3,
+      "name": "MyOrg",
+      "company_name": "MyOrg",
+      "company_type": "gmbh",
+      "vat_id": "DE123123123",
+      "court_of_registration": "München",
+      "registration_no": "12345",
+      "homepage": "",
+      "scoped_external_data": null
+    },
+    "user": null,
+    "status": "created",
+    "approved_at": null,
+    "report": 13
+  },
+  "report_request_code": "UmVwb3J0VHlwZToxMw==",
+  "registration_code": "7LWccc7KkvzqVnHQ"
+}
+```
+
+### Retrieving report data

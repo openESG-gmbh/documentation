@@ -24,15 +24,15 @@ if __name__ == "__main__":
             organization
             for organization in organizations
             if organization["vat_id"] == "DE356190424"
-        )
+        ),
+        None,
     ):
         # we already have an org for that vat_id, using that one
-        org_id = org["id"]
         print(f"Existing org: {org_id}")
     else:
         # we are creating a new organization, which will be linked to our organization with
-        # an authorization grant, that can later be revoeked by the organization
-        org_id = session.post(
+        # an authorization grant, that can later be revoked by the organization
+        org = session.post(
             f"{api_base}/api/organizations/",
             {
                 "name": "Test Client",
@@ -43,22 +43,26 @@ if __name__ == "__main__":
                 "registration_no": "123123",
                 "homepage": "http://foo.bar",
             },
-        ).json()["id"]
+        ).json()
+        org_id = org["id"]
         print(f"Organization {org_id} created")
 
     # Get existing report templates
     template = session.get(f"{api_base}/api/report-templates/").json()[0]
+    print(json.dumps(template, indent=4))
 
     # Get template details
     sections = session.get(
         f"{api_base}/api/report-templates/{template['id']}/sections"
     ).json()
+    print(json.dumps(sections, indent=4))
 
     # Create report from template
     report = session.post(
         f"{api_base}/api/reports/from_template/",
         json={"template": template["id"], "organization": org_id},
     ).json()
+    print(json.dumps(report, indent=4))
 
     # Make meta data accessible on 'field_type_id'
     field_types = {}
@@ -87,4 +91,4 @@ if __name__ == "__main__":
             "field_values": field_values_to_update,
         },
     ).json()
-    print(json.dumps(report, indent=2))
+    print(json.dumps(report, indent=4))
