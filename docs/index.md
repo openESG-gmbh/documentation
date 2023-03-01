@@ -334,3 +334,12 @@ By default, a registration email will be sent to the supplied contact.
 ```
 
 ### Retrieving report data
+After a request has been submitted, you may retrieve the current data via the `/details` route. We can configure webhook 
+callbacks, that are triggered on status changes upon request.
+
+```json
+# Retrieve report data
+request = session.get(
+    f"{api_base}/api/report-requests/{request['report_request']['id']}/details"
+).json()
+```

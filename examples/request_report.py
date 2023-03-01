@@ -44,3 +44,9 @@ if __name__ == "__main__":
         },
     ).json()
     print(json.dumps(request, indent=2))
+
+    # Retrieve report data
+    request = session.get(
+        f"{api_base}/api/report-requests/{request['report_request']['id']}/details"
+    ).json()
+    print(json.dumps(request, indent=2))
