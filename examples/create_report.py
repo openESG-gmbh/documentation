@@ -28,7 +28,7 @@ if __name__ == "__main__":
         None,
     ):
         # we already have an org for that vat_id, using that one
-        print(f"Existing org: {org_id}")
+        print(f"Existing org: {org['id']}")
     else:
         # we are creating a new organization, which will be linked to our organization with
         # an authorization grant, that can later be revoked by the organization
