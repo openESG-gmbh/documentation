@@ -23,22 +23,23 @@ if __name__ == "__main__":
         (
             organization
             for organization in organizations
-            if organization["vat_id"] == "DE356190424"
+            if organization["vat_id"] == "DE356190426"
         ),
         None,
     ):
         # we already have an org for that vat_id, using that one
         print(f"Existing org: {org['id']}")
+        org_id = org["id"]
     else:
         # we are creating a new organization, which will be linked to our organization with
         # an authorization grant, that can later be revoked by the organization
         org = session.post(
             f"{api_base}/api/organizations/",
             {
-                "name": "Test Client",
-                "company_name": "Test Client",
+                "name": "Test Client 123",
+                "company_name": "Test Client 123",
                 "company_type": "gmbh",
-                "vat_id": "DE356190424",
+                "vat_id": "DE356190426",
                 "court_of_registration": "Kassel",
                 "registration_no": "123123",
                 "homepage": "http://foo.bar",
@@ -78,8 +79,13 @@ if __name__ == "__main__":
             "integer": "1",
             "string": "foo",
             "text": "bar",
-            "eu_econmic_activity": "12.12.12 | Fischerei",
+            "boolean": "true",
+            "eu_economic_activity": "12.12.12 | Fischerei",
+            "daterange": "2020-01-01 - 2020-12-31",
         }[field_types[field_value["field_type"]]["metric_type"]["datatype"]]
+        field_value["measurement"] = field_types[field_value["field_type"]][
+            "measurements"
+        ][0]["id"]
         field_values_to_update.append(field_value)
 
     # update report

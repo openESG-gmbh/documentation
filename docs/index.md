@@ -265,8 +265,13 @@ for field_value in report["field_values"]:
         "integer": "1",
         "string": "foo",
         "text": "bar",
-        "eu_econmic_activity": "12.12.12 | Fischerei",
+        "boolean": "true",
+        "eu_economic_activity": "12.12.12 | Fischerei",
+        "daterange": "2020-01-01 - 2020-12-31",
     }[field_types[field_value["field_type"]]["metric_type"]["datatype"]]
+    field_value["measurement"] = field_types[field_value["field_type"]][
+        "measurements"
+    ][0]["id"]
     field_values_to_update.append(field_value)
 
 # update report
