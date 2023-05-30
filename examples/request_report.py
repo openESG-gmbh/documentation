@@ -19,11 +19,11 @@ if __name__ == "__main__":
     organizations = session.get(f"{api_base}/api/organizations/").json()
 
     # use existing org
-    org = organizations[0]
+    org = organizations["results"][0]
     print(json.dumps(org, indent=4))
 
     # Get existing report templates
-    template = session.get(f"{api_base}/api/report-templates/").json()[0]
+    template = session.get(f"{api_base}/api/report-templates/").json()["results"][0]
     print(json.dumps(template, indent=4))
 
     # Get template details

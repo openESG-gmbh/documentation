@@ -44,7 +44,7 @@ organization, and will be able to
 add new reports to that newly created organization.
 
 ```python
-organizations = session.get(f"{api_base}/api/organizations/").json()
+organizations = session.get(f"{api_base}/api/organizations/").json()["results"]
 
 # create or use existing client org
 if org := next(
@@ -85,7 +85,7 @@ are specific to the currently authorized organization.
 
 ```python
 # Get existing report templates
-template = session.get(f"{api_base}/api/report-templates/").json()[0]
+template = session.get(f"{api_base}/api/report-templates/").json()["results"][0]
 ```
 
 Example response:
