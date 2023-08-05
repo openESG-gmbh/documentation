@@ -1,0 +1,28 @@
+root = true
+
+[*]
+indent_style = tab
+indent_size = 4
+tab_width = 4
+end_of_line = lf
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
+
+[{*.gyp,*.md,*.json,*.tf,*.tpl,*.yml,*.yaml, *.css}]
+indent_style = space
+
+[{*.tsx, *.jsx}]
+tab_width = 2
+
+[{*.js, *.ts, *.tsx, *.jsx}]
+max_line_length = 100
+
+[{*.json, *.css, *.yaml}]
+indent_size = 2
+
+[{*.py,*.asm}]
+indent_style = space
+
+[{*.md,*.tsv}]
+trim_trailing_whitespace = false
