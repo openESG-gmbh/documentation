@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "documentation"
+version = "0.1.0"
+description = "Documentation for the openESG API"
+authors = ["openESG <info@openesg.de>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+mkdocs = "^1.5.2"
+mkdocs-material = "^9.1.21"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

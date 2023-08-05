@@ -1,5 +1,65 @@
-site_name: OpenESG Docs
+site_name: API documentation
 site_url: https://openesg-documentation.readthedocs.io/
+site_description: openESG API Documentation
+site_author: openESG GmbH
+repo_url: https://github.com/openESG-gmbh/documentation
+copyright: Copyright &copy; 2023 openESG
+
 nav:
-    - Home: index.md
-theme: readthedocs
+  - authentication.md
+  - organizations.md
+  - report-templates.md
+  - submitting-a-report.md
+  - requesting-a-report.md
+  - Contact: "https://openesg.de/kontakt/"
+  - Imprint: "https://openesg.de/impressum/"
+
+validation:
+  omitted_files: warn
+  absolute_links: warn
+  unrecognized_links: warn
+
+theme:
+  name: material
+  logo: https://openesg.de/wp-content/uploads/2022/06/logo-openesg.png
+  favicon: https://openesg.de/wp-content/uploads/2022/06/openesg-fav_1-150x150.png
+  features:
+    - navigation.footer
+    - search.suggest
+    - search.highlight
+    - search.share
+    - navigation.tracking
+    - navigation.top
+    - navigation.sections
+    - navigation.sections
+    - content.code.copy
+    - toc.integrate
+    - toc.follow
+  palette:
+    primary: teal
+
+extra:
+  generator: false
+  social:
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/company/openesg-gmbh/
+  consent:
+    title: Cookie consent
+    description: >-
+      We use cookies to recognize your repeated visits and preferences, as well
+      as to measure the effectiveness of our documentation and whether users
+      find what they're searching for. With your consent, you're helping us to
+      make our documentation better.
+
+plugins:
+  - offline
+  - search
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
