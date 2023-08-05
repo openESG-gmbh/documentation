@@ -5,4 +5,4 @@ start:
 	poetry run mkdocs serve
 
 build:
-	mkdocs build -d dist
+	poetry run python -m mkdocs build -d dist
