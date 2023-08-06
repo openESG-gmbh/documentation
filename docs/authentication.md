@@ -1,4 +1,4 @@
-## Retrieving access credentials
+# Authentication
 
 You'll need your registered oAuth applications `client_id` and `client_secret`.
 
@@ -13,10 +13,10 @@ This gives us the access token.
 
 ```json
 {
-	"access_token": "sbKAFfq1btNSorhZBLBxmuaoArrBrY",
-	"expires_in": 36000,
-	"token_type": "Bearer",
-	"scope": "read write"
+    "access_token": "sbKAFfq1btNSorhZBLBxmuaoArrBrY",
+    "expires_in": 36000,
+    "token_type": "Bearer",
+    "scope": "read write"
 }
 ```
 

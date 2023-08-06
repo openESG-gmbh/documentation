@@ -1,3 +1,5 @@
+# Submitting a report
+
 Reports are the entities, that group submitted field values into a logical
 collection, they are created from a template, using the `/from_template` action.
 
@@ -17,46 +19,46 @@ Example response:
 
 ```json
 {
-	"id": 14,
-	"template": 1,
-	"status": "requested",
-	"completion_pct": 0,
-	"submitted_at": null,
-	"organization": {
-		"id": 9,
-		"name": "Test Client",
-		"...": "..."
-	},
-	"field_values": [
-		{
-			"id": 261,
-			"organization": 9,
-			"value": null,
-			"value_complex": null,
-			"comment": "",
-			"measurement": null,
-			"attachment": null,
-			"instance_id": 1,
-			"valid": false,
-			"required": true,
-			"section": 3,
-			"field_type": 1
-		},
-		{
-			"id": 262,
-			"organization": 9,
-			"value": null,
-			"value_complex": null,
-			"comment": "",
-			"measurement": null,
-			"attachment": null,
-			"instance_id": 1,
-			"valid": false,
-			"required": true,
-			"section": 4,
-			"field_type": 2
-		}
-	]
+    "id": 14,
+    "template": 1,
+    "status": "requested",
+    "completion_pct": 0,
+    "submitted_at": null,
+    "organization": {
+        "id": 9,
+        "name": "Test Client",
+        "...": "..."
+    },
+    "field_values": [
+        {
+            "id": 261,
+            "organization": 9,
+            "value": null,
+            "value_complex": null,
+            "comment": "",
+            "measurement": null,
+            "attachment": null,
+            "instance_id": 1,
+            "valid": false,
+            "required": true,
+            "section": 3,
+            "field_type": 1
+        },
+        {
+            "id": 262,
+            "organization": 9,
+            "value": null,
+            "value_complex": null,
+            "comment": "",
+            "measurement": null,
+            "attachment": null,
+            "instance_id": 1,
+            "valid": false,
+            "required": true,
+            "section": 4,
+            "field_type": 2
+        }
+    ]
 }
 ```
 

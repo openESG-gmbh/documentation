@@ -1,3 +1,5 @@
+# Requesting a report
+
 We may choose to request a report based on the available templates. In order to
 submit a report request, we need to supply company and contact information.
 
@@ -26,29 +28,29 @@ By default, a registration email will be sent to the supplied contact.
 
 ```json
 {
-	"report_request": {
-		"id": 13,
-		"organization": {
-			"id": 3,
-			"name": "MyOrg",
-			"type": "gmbh",
-			"vat_id": "DE123123123",
-			"court_of_registration": "München",
-			"registration_no": "12345",
-			"homepage": "",
-			"scoped_external_data": null
-		},
-		"user": null,
-		"status": "created",
-		"approved_at": null,
-		"report": 13
-	},
-	"report_request_code": "UmVwb3J0VHlwZToxMw==",
-	"registration_code": "7LWccc7KkvzqVnHQ"
+    "report_request": {
+        "id": 13,
+        "organization": {
+            "id": 3,
+            "name": "MyOrg",
+            "type": "gmbh",
+            "vat_id": "DE123123123",
+            "court_of_registration": "München",
+            "registration_no": "12345",
+            "homepage": "",
+            "scoped_external_data": null
+        },
+        "user": null,
+        "status": "created",
+        "approved_at": null,
+        "report": 13
+    },
+    "report_request_code": "UmVwb3J0VHlwZToxMw==",
+    "registration_code": "7LWccc7KkvzqVnHQ"
 }
 ```
 
-### Retrieving report data
+## Retrieving report data
 
 After a request has been submitted, you may retrieve the current data via the
 `/details` route. We can configure webhook callbacks, that are triggered on

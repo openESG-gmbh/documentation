@@ -1,5 +1,5 @@
 site_name: API documentation
-site_url: https://openesg-documentation.readthedocs.io/
+site_url: http://openesg-gmbh.github.io/documentation/
 site_description: openESG API Documentation
 site_author: openESG GmbH
 repo_url: https://github.com/openESG-gmbh/documentation
@@ -53,7 +53,8 @@ extra:
 
 plugins:
   - offline
-  - search
+  - search:
+      indexing: "full"
 
 markdown_extensions:
   - pymdownx.highlight:
@@ -63,3 +64,5 @@ markdown_extensions:
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - pymdownx.superfences
+  - toc:
+      permalink: true

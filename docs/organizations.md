@@ -1,3 +1,5 @@
+# Organizations
+
 All data in the system is related to an organization. Organizations can be
 related, you are able to create a new organization, and will be able to add
 new reports to that newly created organization.
