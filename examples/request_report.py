@@ -23,7 +23,8 @@ if __name__ == "__main__":
     print(json.dumps(org, indent=4))
 
     # Get existing report templates
-    template = session.get(f"{api_base}/api/report-templates/").json()["results"][0]
+    template = session.get(
+        f"{api_base}/api/report-templates/").json()["results"][0]
     print(json.dumps(template, indent=4))
 
     # Get template details

@@ -1,6 +1,6 @@
-All data in the system is related to an organization. Organizations can be related, you are able to create a new
-organization, and will be able to
-add new reports to that newly created organization.
+All data in the system is related to an organization. Organizations can be
+related, you are able to create a new organization, and will be able to add
+new reports to that newly created organization.
 
 ```python
 organizations = session.get(f"{api_base}/api/organizations/").json()["results"]
@@ -17,8 +17,8 @@ if org := next(
     org_id = org["id"]
     print(f"Existing org: {org_id}")
 else:
-    # we are creating a new organization, which will be linked to our organization
-    # with an authorization grant, that can later be revoeked by the organization
+    # create a new organization, which will be linked to our organization
+    # with an authorization grant, that can be revoked by the organization
     org_id = session.post(
         f"{api_base}/api/organizations/",
         {

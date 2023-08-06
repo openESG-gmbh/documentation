@@ -9,20 +9,11 @@ charset = utf-8
 trim_trailing_whitespace = true
 insert_final_newline = true
 
-[{*.gyp,*.md,*.json,*.tf,*.tpl,*.yml,*.yaml, *.css}]
+[*.{json,yaml,yml}]
 indent_style = space
-
-[{*.tsx, *.jsx}]
-tab_width = 2
-
-[{*.js, *.ts, *.tsx, *.jsx}]
-max_line_length = 100
-
-[{*.json, *.css, *.yaml}]
 indent_size = 2
 
-[{*.py,*.asm}]
+[{*.md}]
 indent_style = space
-
-[{*.md,*.tsv}]
 trim_trailing_whitespace = false
+max_line_length = 80

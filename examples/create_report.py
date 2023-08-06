@@ -31,14 +31,13 @@ if __name__ == "__main__":
         print(f"Existing org: {org['id']}")
         org_id = org["id"]
     else:
-        # we are creating a new organization, which will be linked to our organization with
-        # an authorization grant, that can later be revoked by the organization
+        # create a new organization, which will be linked to our organization
+        # with an authorization grant, that can be revoked by the organization
         org = session.post(
             f"{api_base}/api/organizations/",
             {
                 "name": "Test Client 123",
-                "company_name": "Test Client 123",
-                "company_type": "gmbh",
+                "type": "gmbh",
                 "vat_id": "DE356190426",
                 "court_of_registration": "Kassel",
                 "registration_no": "123123",

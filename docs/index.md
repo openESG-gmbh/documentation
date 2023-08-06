@@ -8,4 +8,5 @@ You can find our demo here: [https://demo.openesg.de](https://demo.openesg.de)
 
 ## Production
 
-You can find our production here: [https://app.openesg.de](https://app.openesg.de)
+You can find our production here:
+[https://app.openesg.de](https://app.openesg.de)
