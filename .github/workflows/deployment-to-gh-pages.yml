@@ -2,9 +2,8 @@
 name: Deploy mkdocs to GitHub Pages
 
 on:
-    # Runs on pushes targeting the default branch
     push:
-        branches: ["main"]
+        branches: [main]
 
     # Allows you to run this workflow manually from the Actions tab
     workflow_dispatch:
@@ -32,14 +31,11 @@ jobs:
             - name: Checkout
               uses: actions/checkout@v3
 
+            - name: Linkt markdown
+              uses: articulate/actions-markdownlint@v1
+
             - name: Install Poetry
               uses: abatilo/actions-poetry@v2
-
-            - name: Set up Python
-              uses: actions/setup-python@v4
-              with:
-                  python-version: "3.11"
-                  cache: "poetry"
 
             - name: Install dependencies
               run: poetry install --no-root

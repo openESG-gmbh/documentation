@@ -6,7 +6,7 @@ authors = ["openESG <info@openesg.de>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.11"
+python = "^3.10"
 mkdocs = "^1.5.2"
 mkdocs-material = "^9.1.21"
 
