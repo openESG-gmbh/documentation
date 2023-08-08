@@ -39,6 +39,9 @@ theme:
     primary: teal
 
 extra:
+  analytics:
+    provider: google
+    property: G-JXZH523GWG
   generator: false
   social:
     - icon: fontawesome/brands/linkedin
