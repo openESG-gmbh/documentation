@@ -11,7 +11,7 @@ nav:
   - report-templates.md
   - submitting-a-report.md
   - requesting-a-report.md
-  - Contact: "https://openesg.de/kontakt/"
+  - Contact: "https://openesg.de/contact/"
   - Imprint: "https://openesg.de/impressum/"
 
 validation:
@@ -42,6 +42,14 @@ extra:
   analytics:
     provider: google
     property: G-JXZH523GWG
+  feedback:
+    title: Was this page helpful?
+    ratings:
+      - icon: material/emoticon-happy-outline
+        name: This page was helpful
+        data: 1
+        note: >-
+          Thanks for your feedback!
   generator: false
   social:
     - icon: fontawesome/brands/linkedin
