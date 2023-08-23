@@ -22,7 +22,7 @@ Example response:
     "id": 14,
     "template": 1,
     "status": "requested",
-    "completion_pct": 0,
+    "progress": 0,
     "submitted_at": null,
     "organization": {
         "id": 9,
@@ -73,7 +73,7 @@ for section in sections:
 ```
 
 In order to update report values the `PATCH` method is supplied with any field
-values, that need updates.
+values that need updates.
 
 ```python
 # prepare report values

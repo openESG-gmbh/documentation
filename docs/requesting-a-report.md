@@ -36,7 +36,7 @@ By default, a registration email will be sent to the supplied contact.
             "type": "gmbh",
             "vat_id": "DE123123123",
             "court_of_registration": "München",
-            "registration_no": "12345",
+            "registration_number": "12345",
             "homepage": "",
             "scoped_external_data": null
         },
@@ -56,7 +56,7 @@ After a request has been submitted, you may retrieve the current data via the
 `/details` route. We can configure webhook callbacks, that are triggered on
 status changes upon request.
 
-```json
+```python
 # Retrieve report data
 request = session.get(
     f"{api_base}/api/report-requests/{request['report_request']['id']}/details"

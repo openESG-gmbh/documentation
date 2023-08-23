@@ -28,7 +28,7 @@ else:
             "type": "gmbh",
             "vat_id": "DE356190424",
             "court_of_registration": "Frankfurt am Main",
-            "registration_no": "123123",
+            "registration_number": "123123",
             "homepage": "http://foo.bar",
         },
     ).json()["id"]

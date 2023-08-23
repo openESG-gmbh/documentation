@@ -40,7 +40,7 @@ if __name__ == "__main__":
                 "type": "gmbh",
                 "vat_id": "DE356190426",
                 "court_of_registration": "Kassel",
-                "registration_no": "123123",
+                "registration_number": "123123",
                 "homepage": "http://foo.bar",
             },
         ).json()

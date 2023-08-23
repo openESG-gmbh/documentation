@@ -4,13 +4,15 @@ This documentation explains the fundamentals of the openESG REST API.
 
 ## Demo
 
-Demo app: [https://demo.openesg.de](https://demo.openesg.de)
+app:
+[https://demo.openesg.de](https://demo.openesg.de)
 
-OpenAPI 3 Schema: [https://demo.openesg.de/api/schema/docs](https://demo.openesg.de/api/schema/docs)
+OpenAPI 3 Schema:
+[https://demo.openesg.de/api/schema/docs](https://demo.openesg.de/api/schema/docs)
 
 ## Production
 
-Demo app:
+app:
 [https://app.openesg.de](https://demo.openesg.de)
 
 OpenAPI 3 Schema:
