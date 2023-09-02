@@ -1,7 +1,8 @@
 # Submitting a report
 
 Reports are the entities, that group submitted field values into a logical
-collection, they are created from a template, using the `/reports/from-template` action.
+collection, they are created from a template, using the
+`/reports/from-template` action.
 
 ```python
 # Create report from template

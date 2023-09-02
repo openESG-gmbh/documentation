@@ -1,5 +1,6 @@
 init:
 	poetry install
+	poetry run pre-commit install
 
 start:
 	poetry run python -m mkdocs serve
