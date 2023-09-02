@@ -1,12 +1,12 @@
 # Submitting a report
 
 Reports are the entities, that group submitted field values into a logical
-collection, they are created from a template, using the `/from_template` action.
+collection, they are created from a template, using the `/reports/from-template` action.
 
 ```python
 # Create report from template
 report = session.post(
-    f"{api_base}/api/reports/from_template/",
+    f"{api_base}/api/reports/from-template/",
     json={"template": template["id"], "organization": org_id},
 ).json()
 ```

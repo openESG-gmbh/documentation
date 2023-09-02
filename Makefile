@@ -6,3 +6,6 @@ start:
 
 build:
 	poetry run python -m mkdocs build -d dist -c
+
+update:
+	poetry update

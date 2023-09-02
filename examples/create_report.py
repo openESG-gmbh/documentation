@@ -59,7 +59,7 @@ if __name__ == "__main__":
 
     # Create report from template
     report = session.post(
-        f"{api_base}/api/reports/from_template/",
+        f"{api_base}/api/reports/from-template/",
         json={"template": template["id"], "organization": org_id},
     ).json()
     print(json.dumps(report, indent=4))
