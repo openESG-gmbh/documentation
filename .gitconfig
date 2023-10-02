@@ -1,0 +1,45 @@
+[color]
+    ui = auto
+[fetch]
+    prune = true
+	# Auto-fetch submodule changes (sadly, won't auto-update)
+    recurseSubmodules = on-demand
+[help]
+    autocorrect = 1
+[push]
+    default = upstream
+	autoSetupRemote = true
+	# When pushing, also push tags whose commit-ishs are now reachable upstream
+    followTags = true
+[alias]
+	cm = commit
+	st = status
+	co = checkout
+	br = branch
+	oneline = log --pretty=oneline
+	# Undo last commit but keep changed files in stage
+  uncommit = reset --soft HEAD~1
+[diff]
+  # Use better, descriptive initials (c, i, w) instead of a/b.
+  mnemonicPrefix = true
+  # Show renames/moves as such
+  renames = true
+[core]
+  # Don't paginate output by default
+  pager = cat
+  # Don't consider trailing space change as a cause for merge conflicts
+  whitespace = -trailing-space
+[grep]
+  break = true
+  heading = true
+  lineNumber = true
+  # Consider most regexes to be ERE
+  extendedRegexp = true
+[status]
+  # Display submodule rev change summaries in status
+  submoduleSummary = true
+  # Recursively traverse untracked directories to display all contents
+  showUntrackedFiles = all
+[tag]
+  # Sort tags as version numbers whenever applicable, so 1.10.2 is AFTER 1.2.0.
+  sort = version:refname
