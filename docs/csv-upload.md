@@ -26,22 +26,29 @@ want to provide.
 
 You can select from the following fields.
 
-- `organization_name`
-- `organization_type` (must be one of the following: `ag`, `ek-ohg`, `gbr`, `gmbh`, `gmbh-co-kg`, `part-gmbb`, `partg`, `ug`. `other`) <!-- markdownlint-disable-line MD013 -->
-- `organization_vat_id`
-- `organization_court_of_registration`
-- `organization_registration_number`
-- `organization_homepage`
-- `organization_email`
-- `organization_phone`
-- `user_first_name`
-- `user_last_name`
-- `user_alias`
-- `user_email`
-- `user_locale` (must be one of the following: `de`, `en`)
-- `user_department`
-- `user_phone`
-- `personal_message`
+* `organization_name`
+* `organization_type` (must be one of the following: `ag`, `ek-ohg`, `gbr`, `gmbh`, `gmbh-co-kg`, `part-gmbb`, `partg`, `ug`, `other`) <!-- markdownlint-disable-line MD013 -->
+* `organization_vat_id`
+* `organization_court_of_registration`
+* `organization_registration_number`
+* `organization_homepage`
+* `organization_email`
+* `organization_phone`
+* `organization_address_line_1`
+* `organization_address_line_2`
+* `organization_house_number`
+* `organization_zip_code`
+* `organization_city`
+* `organization_country` (must be one of the following: `DE`, `AT`, `CH`)
+* `organization_external_data`
+* `user_first_name`
+* `user_last_name`
+* `user_alias`
+* `user_email`
+* `user_locale` (must be one of the following: `de`, `en`)
+* `user_department`
+* `user_phone`
+* `personal_message`
 
 Example:
 
