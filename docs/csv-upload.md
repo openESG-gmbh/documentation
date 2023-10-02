@@ -50,6 +50,9 @@ You can select from the following fields.
 * `user_phone`
 * `personal_message`
 
+You have to provide at least the same fields as in the default format:
+`organization_name,user_first_name,user_last_name,user_email`
+
 Example:
 
 ```csv
