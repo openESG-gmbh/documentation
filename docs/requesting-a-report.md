@@ -1,7 +1,9 @@
 # Requesting a report
 
-We may choose to request a report based on the available templates. In order to
-submit a report request, we need to supply company and contact information.
+We may choose to request a report based on the available templates via the
+[`for-organization`](https://demo.openesg.de/api/schema/docs/#/report-requests/report_requests_for_organization_create) <!-- markdownlint-disable-line MD013 -->
+endpoint. In order to submit a report request, we need to supply company and
+contact information.
 
 ```python
 # Create report request
@@ -53,8 +55,8 @@ By default, a registration email will be sent to the supplied contact.
 ## Retrieving report data
 
 After a request has been submitted, you may retrieve the current data via the
-`/details` route. We can configure webhook callbacks, that are triggered on
-status changes upon request.
+[`/details`](https://demo.openesg.de/api/schema/docs/#/report-requests/report_requests_details_retrieve) <!-- markdownlint-disable-line MD013 -->
+route.
 
 ```python
 # Retrieve report data

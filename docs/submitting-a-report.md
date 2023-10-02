@@ -2,7 +2,8 @@
 
 Reports are the entities, that group submitted field values into a logical
 collection, they are created from a template, using the
-`/reports/from-template` action.
+[`/reports/from-template`](https://demo.openesg.de/api/schema/docs/#/report-templates/report_templates_list) <!-- markdownlint-disable-line MD013 -->
+endpoint.
 
 ```python
 # Create report from template

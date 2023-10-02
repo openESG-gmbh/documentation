@@ -1,8 +1,8 @@
 # Report templates
 
-Report templates define the structure of reports and associated data. Templates
-details are available at the `/sections` actions, and not returned with the
-main resource.
+Report templates define the structure of reports and associated data. Template
+details are available at the [`/sections`](https://demo.openesg.de/api/schema/docs/#/report-templates/report_templates_sections_retrieve) <!-- markdownlint-disable-line MD013 -->
+endpoint, and not returned with the main resource.
 
 Reports are created based on one of the predefined templates. Available
 templates may vary based on organization, they are specific to the currently
