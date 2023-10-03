@@ -1,7 +1,7 @@
 # Requesting a report
 
 We may choose to request a report based on the available templates via the
-[`for-organization`](https://demo.openesg.de/api/schema/docs/#/report-requests/report_requests_for_organization_create) <!-- markdownlint-disable-line MD013 -->
+[`/for-organization`](https://demo.openesg.de/api/schema/docs/#/report-requests/report_requests_for_organization_create) <!-- markdownlint-disable-line MD013 -->
 endpoint. In order to submit a report request, we need to supply company and
 contact information.
 

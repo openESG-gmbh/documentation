@@ -15,7 +15,7 @@ Example:
 
 ```csv
 Test Company GmbH,John,Doe,john.doe@testcompany.com
-Test Company 2 GmbH,Jane,Doe,jane.doe@testcompany2.com,Please fill this out, Jane. <!-- markdownlint-disable-line MD013 -->
+Test Company 2 GmbH,Jane,Doe,jane.doe@testcompany2.com,Please fill this out, Jane.
 Test Firma GmbH,Max,Mustermann,max.mustermann@testfirma.de
 ```
 
