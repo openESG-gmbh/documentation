@@ -18,7 +18,7 @@
 	br = branch
 	oneline = log --pretty=oneline
 	# Undo last commit but keep changed files in stage
-  uncommit = reset --soft HEAD~1
+    uncommit = reset --soft HEAD~1
 [diff]
   # Use better, descriptive initials (c, i, w) instead of a/b.
   mnemonicPrefix = true
