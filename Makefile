@@ -1,5 +1,6 @@
 init:
-	poetry install
+	git config include.path ../.gitconfig
+	poetry install --no-root
 	poetry run pre-commit install
 
 s: start
