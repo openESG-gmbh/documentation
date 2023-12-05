@@ -27,8 +27,9 @@ want to provide.
 You can select from the following fields.
 
 * `organization_name`
-* `organization_type` (must be one of the following: `ag`, `ek-ohg`, `gbr`, `gmbh`, `gmbh-co-kg`, `part-gmbb`, `partg`, `ug`, `other`) <!-- markdownlint-disable-line MD013 -->
+* `organization_type` (must be one of the following: `ab`, `adoer`, `ag`, `eg`, `ek`, `ek-ohg`, `gbr`, `gmbh`, `gmbh-co-kg`, `kg`, `kdoer`, `ltd`, `ohg`, `other`, `part-gmbb`, `partg`, `se`, `se-co-kg`, `sole-proprietorship`, `stiftung`, `stiftung-co-kg`, `ug`, `ug-co-kg`) <!-- markdownlint-disable-line MD013 -->
 * `organization_vat_id`
+* `organization_customer_identifier` (can be used to filter the reports later)
 * `organization_court_of_registration`
 * `organization_registration_number`
 * `organization_homepage`
@@ -41,11 +42,11 @@ You can select from the following fields.
 * `organization_city`
 * `organization_country` (must be one of the following: `DE`, `AT`, `CH`)
 * `organization_external_data`
+* `user_gender` (must be one of the following: `male`, `female`, `diverse`, `not_specified`. Default: `not_specified`) <!-- markdownlint-disable-line MD013 -->
 * `user_first_name`
 * `user_last_name`
-* `user_alias`
 * `user_email`
-* `user_locale` (must be one of the following: `de`, `en`)
+* `user_locale` (must be one of the following: `de`, `en`. Default: `de`)
 * `user_department`
 * `user_phone`
 * `personal_message`
