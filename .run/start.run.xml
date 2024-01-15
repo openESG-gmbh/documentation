@@ -1,0 +1,10 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="start" type="MAKEFILE_TARGET_RUN_CONFIGURATION" factoryName="Makefile">
+    <makefile filename="$PROJECT_DIR$/Makefile" target="start" workingDirectory="" arguments="">
+      <envs />
+    </makefile>
+    <method v="2">
+      <option name="LaunchBrowser.Before.Run" url="http://127.0.0.1:8000/documentation/ " />
+    </method>
+  </configuration>
+</component>

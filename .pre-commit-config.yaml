@@ -14,3 +14,10 @@ repos:
       - id: markdownlint
         files: ".md"
         args: ["--fix"]
+
+  - repo: local
+    hooks:
+      - id: build-project
+        name: build project
+        language: system
+        entry: sh -c "make build"
