@@ -71,7 +71,7 @@ pm.sendRequest(getTokenRequest, (err, response) => {
 
 Now in the `Authorization` tab, set
 
-- `Type` to `Bearer Token` and
-- `Token` to `{{access_token}}`
+* `Type` to `Bearer Token` and
+* `Token` to `{{access_token}}`
 
 All Endpoints should then use the authorization type `Inherit auth from parent`.
