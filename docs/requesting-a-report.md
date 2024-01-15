@@ -1,4 +1,4 @@
-# Requesting a report
+# Requesting a report (outdated)
 
 We may choose to request a report based on the available templates via the
 [`/for-organization`](https://demo.openesg.de/api/schema/docs/#/report-requests/report_requests_for_organization_create) <!-- markdownlint-disable-line MD013 -->

@@ -1,4 +1,4 @@
-# Report templates
+# Report templates (outdated)
 
 Report templates define the structure of reports and associated data. Template
 details are available at the [`/sections`](https://demo.openesg.de/api/schema/docs/#/report-templates/report_templates_sections_retrieve) <!-- markdownlint-disable-line MD013 -->
