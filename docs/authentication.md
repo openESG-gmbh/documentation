@@ -20,7 +20,7 @@ This gives us the access token.
 }
 ```
 
-Example (Python):
+## Example (Python)
 
 ```python
 from oauthlib.oauth2 import BackendApplicationClient
@@ -35,3 +35,43 @@ session = OAuth2Session(client=client)
 auth = HTTPBasicAuth(env("CLIENT_ID"), env("CLIENT_SECRET"))
 token = session.fetch_token(token_url=f"{API_BASE}/o/token/", auth=auth)
 ```
+
+## Example (Postman)
+
+Create a new Postman Collection by importing the downloaded Open API 3.1 schema
+JSON file. Then add the following `Pre-request Script` in the root of the
+`Collection`:
+
+```js
+const tokenUrl = 'https://demo.openesg.de/o/token/';
+
+const clientId = '<client-id>';
+const clientSecret = '<client-secret>';
+
+const getTokenRequest = {
+  method: 'POST',
+  url: tokenUrl,
+  body: {
+      mode: 'formdata',
+      formdata: [
+          { key: 'grant_type', value: 'client_credentials' },
+          { key: 'client_id', value: clientId },
+          { key: 'client_secret', value: clientSecret }
+      ]
+  }
+};
+
+pm.sendRequest(getTokenRequest, (err, response) => {
+  const jsonResponse = response.json();
+  const newAccessToken = jsonResponse.access_token;
+
+  pm.variables.set('access_token', newAccessToken);
+});
+```
+
+Now in the `Authorization` tab, set
+
+- `Type` to `Bearer Token` and
+- `Token` to `{{access_token}}`
+
+All Endpoints should then use the authorization type `Inherit auth from parent`.

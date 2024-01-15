@@ -1,4 +1,4 @@
-# Submitting a report
+# Submitting a report (outdated)
 
 Reports are the entities, that group submitted field values into a logical
 collection, they are created from a template, using the
