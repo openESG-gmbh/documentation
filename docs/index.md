@@ -19,7 +19,7 @@ OpenAPI 3.1 Schema:
 ## Deprecated - migrate to the new REST API
 
 OpenAPI 3 Schema Demo:
-[https://demo.openesg.de/api/schema/docs](https://demo.openesg.de/api/schema/docs)
+[https://demo.openesg.de/api/schema/docs/](https://demo.openesg.de/api/schema/docs/)
 
 OpenAPI 3 Schema Production:
-[https://app.openesg.de/api/schema/docs](https://app.openesg.de/api/schema/docs)
+[https://app.openesg.de/api/schema/docs/](https://app.openesg.de/api/schema/docs/)
