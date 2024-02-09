@@ -18,6 +18,8 @@ OpenAPI 3.1 Schema:
 
 ## Deprecated - migrate to the new REST API
 
+Will be removed in March 2024.
+
 OpenAPI 3 Schema Demo:
 [https://demo.openesg.de/api/schema/docs/](https://demo.openesg.de/api/schema/docs/)
 

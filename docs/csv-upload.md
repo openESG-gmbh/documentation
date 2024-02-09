@@ -30,7 +30,7 @@ You can select from the following fields.
 * `organization_type` (must be one of the following: `ab`, `adoer`, `ag`, `eg`, `ek`, `ek-ohg`, `gbr`, `gmbh`, `gmbh-co-kg`, `kg`, `kdoer`, `ltd`, `ohg`, `other`, `part-gmbb`, `partg`, `se`, `se-co-kg`, `sole-proprietorship`, `stiftung`, `stiftung-co-kg`, `ug`, `ug-co-kg`). Alternatively to the `key`, one can also pass the `name`, e.g. `GmbH` instead of `gmbh`  <!-- markdownlint-disable-line MD013 -->
 * `organization_vat_id`
 * `organization_court_of_registration`
-* `organization_commercial_registration_number`
+* `organization_commercial_register_number`
 * `organization_homepage`
 * `organization_email`
 * `organization_phone`
