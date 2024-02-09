@@ -27,11 +27,10 @@ want to provide.
 You can select from the following fields.
 
 * `organization_name`
-* `organization_type` (must be one of the following: `ab`, `adoer`, `ag`, `eg`, `ek`, `ek-ohg`, `gbr`, `gmbh`, `gmbh-co-kg`, `kg`, `kdoer`, `ltd`, `ohg`, `other`, `part-gmbb`, `partg`, `se`, `se-co-kg`, `sole-proprietorship`, `stiftung`, `stiftung-co-kg`, `ug`, `ug-co-kg`) <!-- markdownlint-disable-line MD013 -->
+* `organization_type` (must be one of the following: `ab`, `adoer`, `ag`, `eg`, `ek`, `ek-ohg`, `gbr`, `gmbh`, `gmbh-co-kg`, `kg`, `kdoer`, `ltd`, `ohg`, `other`, `part-gmbb`, `partg`, `se`, `se-co-kg`, `sole-proprietorship`, `stiftung`, `stiftung-co-kg`, `ug`, `ug-co-kg`). Alternatively to the `key`, one can also pass the `name`, e.g. `GmbH` instead of `gmbh`  <!-- markdownlint-disable-line MD013 -->
 * `organization_vat_id`
-* `organization_customer_identifier` (can be used to filter the reports later)
 * `organization_court_of_registration`
-* `organization_registration_number`
+* `organization_commercial_registration_number`
 * `organization_homepage`
 * `organization_email`
 * `organization_phone`
@@ -41,7 +40,6 @@ You can select from the following fields.
 * `organization_zip_code`
 * `organization_city`
 * `organization_country` (must be one of the following: `DE`, `AT`, `CH`)
-* `organization_external_data`
 * `user_gender` (must be one of the following: `male`, `female`, `diverse`, `not_specified`. Default: `not_specified`) <!-- markdownlint-disable-line MD013 -->
 * `user_first_name`
 * `user_last_name`
@@ -53,6 +51,8 @@ You can select from the following fields.
 
 You have to provide at least the following fields:
 `organization_name,organization_type,organization_vat_id,user_first_name,user_last_name,user_email`
+
+The delimiter should be a comma (`,`) or a semicolon (`;`).
 
 Example:
 
