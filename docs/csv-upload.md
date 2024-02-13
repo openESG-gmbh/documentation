@@ -3,25 +3,9 @@
 To request multiple reports via the openESG plattform, you can upload a CSV file
 containing the required information.
 
-## Default format
+## csv format
 
-The default format is without a head, just the data.
-
-```csv
-organization_name,user_first_name,user_last_name,user_email,personal_message
-```
-
-Example:
-
-```csv
-Test Company GmbH,John,Doe,john.doe@testcompany.com
-Test Company 2 GmbH,Jane,Doe,jane.doe@testcompany2.com,Please fill this out, Jane.
-Test Firma GmbH,Max,Mustermann,max.mustermann@testfirma.de
-```
-
-## Custom format
-
-You can add a header to the csv file, to dynamically select, which data do you
+You should add a header to the csv file, to dynamically select, which data do you
 want to provide.
 
 You can select from the following fields.
@@ -39,14 +23,14 @@ You can select from the following fields.
 * `organization_house_number`
 * `organization_zip_code`
 * `organization_city`
-* `organization_country` (must be one of the following: `DE`, `AT`, `CH`)
+* `organization_country` (must be one of the following: `AT`, `BE`, `CH`, `CZ`, `DE`, `DK`, `ES`, `FR`, `GB`, `HU`, `IT`, `LU`, `NL`, `PL`, `SE`, `TR`. Default: `DE`). Alternatively to the `code`, one can also pass the `name`, e.g. `Deutschland` instead of `DE` <!-- markdownlint-disable-line MD013 -->
+* `user_email`
 * `user_gender` (must be one of the following: `male`, `female`, `diverse`, `not_specified`. Default: `not_specified`) <!-- markdownlint-disable-line MD013 -->
 * `user_first_name`
 * `user_last_name`
-* `user_email`
-* `user_locale` (must be one of the following: `de`, `en`. Default: `de`)
-* `user_department`
 * `user_phone`
+* `user_locale` (must be one of the following: `de`, `en`, `fr`, `es` or ``it. Default: `de`) <!-- markdownlint-disable-line MD013 -->
+* `user_department`
 * `personal_message`
 
 You have to provide at least the following fields:

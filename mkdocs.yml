@@ -1,9 +1,9 @@
 site_name: Technical documentation
-site_url: http://openesg-gmbh.github.io/documentation/
+site_url: https://docs.openesg.de
 site_description: openESG Technical Documentation
 site_author: openESG GmbH
 repo_url: https://github.com/openESG-gmbh/documentation
-copyright: Copyright &copy; 2023 openESG
+copyright: Copyright &copy; 2024 openESG
 
 nav:
   - Home: index.md
