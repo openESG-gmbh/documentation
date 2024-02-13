@@ -29,7 +29,7 @@ You can select from the following fields.
 * `user_first_name`
 * `user_last_name`
 * `user_phone`
-* `user_locale` (must be one of the following: `de`, `en`, `fr`, `es` or ``it. Default: `de`) <!-- markdownlint-disable-line MD013 -->
+* `user_locale` (must be one of the following: `de`, `en`, `fr`, `es` or `it`. Default: `de`) <!-- markdownlint-disable-line MD013 -->
 * `user_department`
 * `personal_message`
 
