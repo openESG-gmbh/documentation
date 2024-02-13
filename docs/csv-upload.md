@@ -1,9 +1,9 @@
 # CSV Upload
 
-To request multiple reports via the openESG plattform, you can upload a CSV file
+To request multiple reports via the openESG platform, you can upload a CSV file
 containing the required information.
 
-## csv format
+## CSV format
 
 You should add a header to the csv file, to dynamically select, which data do you
 want to provide.
@@ -38,7 +38,9 @@ You have to provide at least the following fields:
 
 The delimiter should be a comma (`,`) or a semicolon (`;`).
 
-Example:
+## Example
+
+Here is an example with three organizations:
 
 ```csv
 organization_name,organization_type,organization_vat_id,organization_email,organization_homepage,user_first_name,user_last_name,user_email
