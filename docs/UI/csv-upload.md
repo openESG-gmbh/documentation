@@ -30,6 +30,7 @@ You can select from the following fields.
 * `user_last_name`
 * `user_phone`
 * `user_locale` (must be one of the following: `de`, `en`, `fr`, `es` or `it`. Default: `de`) <!-- markdownlint-disable-line MD013 -->
+* `user_timezone` (must be one of the tz database, e.g. `Europe/Berlin`. Default: `UTC`) <!-- markdownlint-disable-line MD013 -->
 * `user_department`
 * `personal_message`
 

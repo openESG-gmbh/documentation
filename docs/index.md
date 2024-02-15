@@ -1,27 +1,13 @@
-# openESG API documentation
+# Overview
 
-This documentation explains the fundamentals of the openESG REST API.
+In the REST API section, you will find the documentation for the REST API of
+the platform. The REST API is the main way to interact with the platform
+programmatically. It is a powerful tool that allows you to read and write data
+from and to the platform.
 
-## Demo
+The UI section contains the documentation for the user interface of the
+platform. The user interface is the main way to interact with the platform. It
+is a powerful tool that allows you to read and write data from and to the
+platform.
 
-URL: [https://demo.openesg.de](https://demo.openesg.de)
-
-OpenAPI 3.1 Schema:
-[https://demo.openesg.de/api/v1/docs](https://demo.openesg.de/api/v1/docs)
-
-## Production
-
-URL: [https://app.openesg.de](https://demo.openesg.de)
-
-OpenAPI 3.1 Schema:
-[https://app.openesg.de/api/v1/docs](https://app.openesg.de/api/v1/docs)
-
-## Deprecated - migrate to the new REST API
-
-Will be removed in March 2024.
-
-OpenAPI 3 Schema Demo:
-[https://demo.openesg.de/api/schema/docs/](https://demo.openesg.de/api/schema/docs/)
-
-OpenAPI 3 Schema Production:
-[https://app.openesg.de/api/schema/docs/](https://app.openesg.de/api/schema/docs/)
+For general questions, please use our contact form: <https://openesg.de/contact/>

@@ -4,17 +4,7 @@ site_description: openESG Technical Documentation
 site_author: openESG GmbH
 repo_url: https://github.com/openESG-gmbh/documentation
 copyright: Copyright &copy; 2024 openESG
-
-nav:
-  - Home: index.md
-  - authentication.md
-  - organizations.md
-  - report-templates.md
-  - submitting-a-report.md
-  - requesting-a-report.md
-  - csv-upload.md
-  - Contact: "https://openesg.de/contact/"
-  - Imprint: "https://openesg.de/impressum/"
+edit_uri: edit/main/docs/
 
 validation:
   omitted_files: warn
@@ -23,22 +13,24 @@ validation:
 
 theme:
   name: material
-  logo: https://openesg.de/wp-content/uploads/2022/06/logo-openesg.png
+  logo: assets/images/logo-openesg-light.png
   favicon: https://openesg.de/wp-content/uploads/2022/06/openesg-fav_1-150x150.png
   features:
+    - content.code.copy
+    - content.action.edit
     - navigation.footer
-    - search.suggest
-    - search.highlight
-    - search.share
     - navigation.tracking
     - navigation.top
     - navigation.sections
     - navigation.sections
-    - content.code.copy
+    - navigation.instant
+    - search.suggest
+    - search.highlight
+    - search.share
     - toc.integrate
     - toc.follow
-  palette:
-    primary: teal
+  icon:
+    repo: fontawesome/brands/github
 
 extra:
   analytics:
@@ -64,9 +56,14 @@ extra:
       find what they're searching for. With your consent, you're helping us to
       make our documentation better.
 
+extra_css:
+  - assets/css/extra.css
+
 plugins:
   - offline
   - search
+  - git-revision-date-localized
+  - privacy
 
 markdown_extensions:
   # Python Markdown
