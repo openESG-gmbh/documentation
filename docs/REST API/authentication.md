@@ -12,7 +12,7 @@ curl -u '<client_id>:<client_secret>' \
      -d "grant_type=client_credentials"
 ```
 
-This gives you the access token, which is valid for 1 hours.
+This gives you the access token, which is valid for 1 hour.
 
 ```json
 {
