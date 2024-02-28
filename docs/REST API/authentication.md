@@ -1,6 +1,9 @@
 # Authentication
 
-You'll need your registered oAuth applications `client_id` and `client_secret`.
+You'll need your registered oAuth application's `client_id` and `client_secret`.
+Then you can get an access token by sending a request to `POST /o/token/`.
+
+## Example (cURL)
 
 ```bash
 curl -u '<client_id>:<client_secret>' \
@@ -9,7 +12,7 @@ curl -u '<client_id>:<client_secret>' \
      -d "grant_type=client_credentials"
 ```
 
-This gives us the access token.
+This gives you the access token, which is valid for 1 hour.
 
 ```json
 {
