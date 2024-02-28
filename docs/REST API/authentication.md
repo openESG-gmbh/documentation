@@ -1,6 +1,8 @@
 # Authentication
 
-You'll need your registered oAuth application's `client_id` and `client_secret`.
+You'll need your registered OAuth 2.0 application's `client_id` and
+`client_secret`.
+
 Then you can get an access token by sending a request to `POST /o/token/`.
 
 ## Example (cURL)
@@ -17,7 +19,7 @@ This gives you the access token, which is valid for 1 hour.
 ```json
 {
     "access_token": "sbKAFfq1btNSorhZBLBxmuaoArrBrY",
-    "expires_in": 36000,
+    "expires_in": 3600,
     "token_type": "Bearer",
     "scope": "read write"
 }
