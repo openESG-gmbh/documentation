@@ -1,4 +1,4 @@
-name: Deploy mkdocs to GitHub Pages
+name: Checks
 
 on:
   push:
