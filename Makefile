@@ -12,3 +12,4 @@ build:
 
 update:
 	poetry update
+	poetry run pre-commit autoupdate
