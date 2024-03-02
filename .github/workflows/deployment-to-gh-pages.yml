@@ -45,7 +45,7 @@ jobs:
         run: poetry install --no-root
 
       - name: Build mkdocs
-        run: make build
+        run: poetry run python -m mkdocs build -d dist
 
       - name: Setup GitHub Pages
         uses: actions/configure-pages@v4

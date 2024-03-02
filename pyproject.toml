@@ -1,15 +1,15 @@
 [tool.poetry]
 name = "documentation"
-version = "0.1.0"
+version = "0"
 description = "Documentation for the openESG API"
 authors = ["openESG <info@openesg.de>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.10"
-mkdocs = "^1.5.2"
-mkdocs-material = "^9.1.21"
-pre-commit = "^3.4.0"
+python = "^3.12"
+mkdocs = "^1.5.3"
+mkdocs-material = "^9.5.12"
+pre-commit = "^3.6.2"
 mkdocs-git-revision-date-localized-plugin = "^1.2.4"
 
 
