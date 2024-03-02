@@ -1,9 +1,9 @@
 [tool.poetry]
 name = "documentation"
-version = "0"
 description = "Documentation for the openESG API"
 authors = ["openESG <info@openesg.de>"]
 readme = "README.md"
+package-mode = false
 
 [tool.poetry.dependencies]
 python = "^3.12"
