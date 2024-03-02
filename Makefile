@@ -8,7 +8,7 @@ start:
 	poetry run python -m mkdocs serve -c
 
 build:
-	poetry run python -m mkdocs build -d dist -c
+	poetry run python -m mkdocs build -d dist
 
 update:
 	poetry update
