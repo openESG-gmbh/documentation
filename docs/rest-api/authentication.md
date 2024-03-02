@@ -1,9 +1,12 @@
 # Authentication
 
+The authentication is based upon the OAuth 2.0 client credentials flow.
+
 You'll need your registered OAuth 2.0 application's `client_id` and
 `client_secret`.
 
 Then you can get an access token by sending a request to `POST /o/token/`.
+This gives you an access token, which is valid for 1 hour.
 
 ## Example (cURL)
 
@@ -14,7 +17,7 @@ curl -u '<client_id>:<client_secret>' \
      -d "grant_type=client_credentials"
 ```
 
-This gives you the access token, which is valid for 1 hour.
+Example response:
 
 ```json
 {
