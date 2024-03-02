@@ -4,7 +4,7 @@
       <envs />
     </makefile>
     <method v="2">
-      <option name="LaunchBrowser.Before.Run" url="http://127.0.0.1:8000/documentation/ " />
+      <option name="LaunchBrowser.Before.Run" url="http://127.0.0.1:8000/" />
     </method>
   </configuration>
 </component>
