@@ -11,7 +11,7 @@ want to provide.
 You can select from the following fields.
 
 * `organization_name`
-* `organization_type` (must be one of the following: `ab`, `adoer`, `ag`, `eg`, `ek`, `ek-ohg`, `gbr`, `gmbh`, `gmbh-co-kg`, `kg`, `kdoer`, `ltd`, `ohg`, `other`, `part-gmbb`, `partg`, `se`, `se-co-kg`, `sole-proprietorship`, `stiftung`, `stiftung-co-kg`, `ug`, `ug-co-kg`). Alternatively to the `key`, one can also pass the `name`, e.g. `GmbH` instead of `gmbh`  <!-- markdownlint-disable-line MD013 -->
+* `organization_type` (must be one of the following: `ab`, `adoer`, `ag`, `eg`, `ek`, `ek-ohg`, `gbr`, `gmbh`, `gmbh-co-kg`, `kg`, `kdoer`, `ltd`, `ohg`, `other`, `part-gmbb`, `partg`, `se`, `se-co-kg`, `sole-proprietorship`, `stiftung`, `stiftung-co-kg`, `ug`, `ug-co-kg`. Default: `gmbh`). Alternatively to the `key`, one can also pass the `name`, e.g. `GmbH` instead of `gmbh`  <!-- markdownlint-disable-line MD013 -->
 * `organization_vat_id`
 * `organization_court_of_registration`
 * `organization_commercial_register_number`
@@ -34,10 +34,12 @@ You can select from the following fields.
 * `user_department`
 * `personal_message`
 
-You have to provide at least the following fields:
-`organization_name,organization_type,organization_vat_id,user_first_name,user_last_name,user_email`
-
 The delimiter should be a comma (`,`) or a semicolon (`;`).
+
+### Mandatory fields
+
+* `organization_name`
+* `user_email`
 
 ## Example
 
