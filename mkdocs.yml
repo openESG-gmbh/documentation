@@ -23,6 +23,7 @@ validation:
 
 theme:
   name: material
+  custom_dir: overrides
   logo: assets/images/logo-openesg-light.png
   favicon: https://openesg.de/wp-content/uploads/2022/06/openesg-fav_1-150x150.png
   features:
@@ -43,17 +44,6 @@ theme:
     repo: fontawesome/brands/github
 
 extra:
-  analytics:
-    provider: google
-    property: G-JXZH523GWG
-  feedback:
-    title: Was this page helpful?
-    ratings:
-      - icon: material/emoticon-happy-outline
-        name: This page was helpful
-        data: 1
-        note: >-
-          Thanks for your feedback!
   generator: false
   social:
     - icon: fontawesome/brands/linkedin
