@@ -33,6 +33,7 @@ You can select from the following fields.
 * `user_timezone` (must be one of the tz database, e.g. `Europe/Berlin`. Default: `UTC`) <!-- markdownlint-disable-line MD013 -->
 * `user_department`
 * `personal_message`
+* `customer_identifier` (can be used to filter reports or report requests)
 
 The delimiter should be a comma (`,`) or a semicolon (`;`).
 
