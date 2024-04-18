@@ -64,8 +64,7 @@ plugins:
   - search
   - git-revision-date-localized
   - privacy:
-      assets_exclude:
-        - plsbl.openesg.de/*
+      assets: false
 
 markdown_extensions:
   # Python Markdown
