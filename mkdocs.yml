@@ -8,7 +8,7 @@ edit_uri: edit/main/docs/
 
 nav:
   - Overview: index.md
-  - Contact: https://openesg.de/contact/
+  - Contact: https://openesg.de/kontakt/
   - Imprint: https://openesg.de/impressum/
   - REST API:
       - Introduction: rest-api/index.md
