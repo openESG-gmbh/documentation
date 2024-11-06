@@ -11,7 +11,7 @@ want to provide.
 You can select from the following fields.
 
 * `organization_name`
-* `organization_type` (must be one of the following: `ab`, `adoer`, `ag`, `eg`, `ek`, `ek-ohg`, `gbr`, `gmbh`, `gmbh-co-kg`, `kg`, `kdoer`, `ltd`, `ohg`, `other`, `part-gmbb`, `partg`, `se`, `se-co-kg`, `sole-proprietorship`, `stiftung`, `stiftung-co-kg`, `ug`, `ug-co-kg`. Default: `gmbh`). Alternatively to the `key`, one can also pass the `name`, e.g. `GmbH` instead of `gmbh`  <!-- markdownlint-disable-line MD013 -->
+* `organization_legal_form` (must be one of the following: `ab`, `adoer`, `ag`, `eg`, `ek`, `ek-ohg`, `gbr`, `gmbh`, `gmbh-co-kg`, `kg`, `kdoer`, `ltd`, `ohg`, `other`, `part-gmbb`, `partg`, `se`, `se-co-kg`, `sole-proprietorship`, `stiftung`, `stiftung-co-kg`, `ug`, `ug-co-kg`. Default: `gmbh`). Alternatively to the `key`, one can also pass the `name`, e.g. `GmbH` instead of `gmbh`  <!-- markdownlint-disable-line MD013 -->
 * `organization_vat_id`
 * `organization_court_of_registration`
 * `organization_commercial_register_number`
@@ -47,7 +47,7 @@ The delimiter should be a comma (`,`) or a semicolon (`;`).
 Here is an example with three organizations:
 
 ```csv
-organization_name,organization_type,organization_vat_id,organization_email,organization_homepage,user_first_name,user_last_name,user_email
+organization_name,organization_legal_form,organization_vat_id,organization_email,organization_homepage,user_first_name,user_last_name,user_email
 Test Customer,gmbh,DE123456789,test@customer.de,https://testcustomer.de,Max,Mustermann,max.mustermann@testcustomer.de
 Test Company,ag,DE123456788,test@company.de,https://testcustomer.de,Max,Mustermann,max.mustermann@testcustomer.de
 Test Company 2,ek-ohg,DE123456787,test@company2.de,https://testcomapny2.de,Jane,Doe,jane.doe@testcompany2.de
