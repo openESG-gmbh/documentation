@@ -1,15 +1,16 @@
 init:
 	git config include.path ../.gitconfig
-	poetry install --no-root
-	poetry run pre-commit install
+	uv sync --all-extras --dev
+	uv run pre-commit install
 
 s: start
 start:
-	poetry run python -m mkdocs serve -c
+	uv run mkdocs serve -c
 
 build:
-	poetry run python -m mkdocs build -d dist
+	uv run mkdocs build -d dist
 
 update:
-	poetry update
-	poetry run pre-commit autoupdate
+	uv lock --upgrade
+	uv sync
+	uv run pre-commit autoupdate

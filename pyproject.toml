@@ -1,18 +1,17 @@
-[tool.poetry]
+[project]
 name = "documentation"
+version = "0.0.0"
+requires-python = "<4.0.0,>=3.12.0"
 description = "Documentation for the openESG API"
-authors = ["openESG <info@openesg.de>"]
-readme = "README.md"
-package-mode = false
+authors = [
+    {name = "openESG GmbH", email = "support@openesg.de"}
+]
+dependencies = [
+	"mkdocs>=1.5.3",
+	"mkdocs-material>=9.5.12",
+	"pre-commit>=3.6.2",
+	"mkdocs-git-revision-date-localized-plugin>=1.2.4"
+]
 
-[tool.poetry.dependencies]
-python = "^3.12"
-mkdocs = "^1.5.3"
-mkdocs-material = "^9.5.12"
-pre-commit = "^3.6.2"
-mkdocs-git-revision-date-localized-plugin = "^1.2.4"
-
-
-[build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+[tool.uv]
+package = false

@@ -25,15 +25,16 @@ You can select from the following fields.
 * `organization_city`
 * `organization_country` (must be one of the following: `AT`, `BE`, `CH`, `CZ`, `DE`, `DK`, `ES`, `FR`, `GB`, `HU`, `IT`, `LU`, `NL`, `PL`, `SE`, `TR`. Default: `DE`). Alternatively to the `code`, one can also pass the `name`, e.g. `Deutschland` instead of `DE` <!-- markdownlint-disable-line MD013 -->
 * `user_email`
-* `user_gender` (must be one of the following: `male`, `female`, `diverse`, `not_specified`. Default: `not_specified`) <!-- markdownlint-disable-line MD013 -->
+* `user_salutation` (must be one of the following: `dear_mr`, `dear_mrs`, `good_day`.) <!-- markdownlint-disable-line MD013 -->
 * `user_first_name`
 * `user_last_name`
 * `user_phone`
-* `user_locale` (must be one of the following: `de`, `en`, `fr`, `es` or `it`. Default: `de`) <!-- markdownlint-disable-line MD013 -->
+* `user_locale` (must be one of the following: `en_US`, `de_DE`, `fr_FR`, `es_ES` or `it_IT`. Default: `de_DE`) <!-- markdownlint-disable-line MD013 -->
 * `user_timezone` (must be one of the tz database, e.g. `Europe/Berlin`. Default: `UTC`) <!-- markdownlint-disable-line MD013 -->
 * `user_department`
 * `personal_message`
 * `customer_identifier` (can be used to filter reports or report requests)
+* `proivder_notification` (must be one of the following: `directly`, `after_esg_risk_check`, `no_notification`. Default: `directly`) <!-- markdownlint-disable-line MD013 -->
 
 The delimiter should be a comma (`,`) or a semicolon (`;`).
 
@@ -47,8 +48,8 @@ The delimiter should be a comma (`,`) or a semicolon (`;`).
 Here is an example with three organizations:
 
 ```csv
-organization_name,organization_legal_form,organization_vat_id,organization_email,organization_homepage,user_first_name,user_last_name,user_email
-Test Customer,gmbh,DE123456789,test@customer.de,https://testcustomer.de,Max,Mustermann,max.mustermann@testcustomer.de
-Test Company,ag,DE123456788,test@company.de,https://testcustomer.de,Max,Mustermann,max.mustermann@testcustomer.de
-Test Company 2,ek-ohg,DE123456787,test@company2.de,https://testcomapny2.de,Jane,Doe,jane.doe@testcompany2.de
+organization_name,organization_legal_form,organization_vat_id,organization_email,organization_homepage,user_salutation,user_first_name,user_last_name,user_email,provider_notification
+Test Customer,gmbh,DE123456789,test@customer.de,https://testcustomer.de,dear_mr,Max,Mustermann,max.mustermann@testcustomer.de,directly
+Test Company,ag,DE123456788,test@company.de,https://testcustomer.de,dear_mr,Max,Mustermann,max.mustermann@testcustomer.de,no_notification
+Test Company 2,ek-ohg,DE123456787,test@company2.de,https://testcomapny2.de,dear_mrs,Jane,Doe,jane.doe@testcompany2.de,directly
 ```
