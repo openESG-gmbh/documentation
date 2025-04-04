@@ -13,6 +13,10 @@ permissions:
   pages: write
   id-token: write
 
+env:
+    PYTHON_VERSION: 3.12.9
+    UV_VERSION: 0.6.9
+
 # Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
 # However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
 concurrency:
@@ -27,25 +31,30 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v4 # https://github.com/actions/checkout
 
-      - name: Lint markdown
-        uses: articulate/actions-markdownlint@v1
-
-      - name: Install Poetry
-        uses: abatilo/actions-poetry@v3
-
-      - name: Set up Python
-        uses: actions/setup-python@v5
+      - uses: DavidAnson/markdownlint-cli2-action@v19 # https://github.com/DavidAnson/markdownlint-cli2-action
         with:
-          python-version: "3.12"
-          cache: "poetry"
+          globs: '**/*.md'
+
+      - name: Setup Python ${{ env.PYTHON_VERSION }}
+        id: setup-python
+        uses: actions/setup-python@v5 # https://github.com/actions/setup-python
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+
+      - name: Install uv ${{ env.UV_VERSION }}
+        uses: astral-sh/setup-uv@v5 # https://github.com/astral-sh/setup-uv
+        with:
+          version: ${{ env.UV_VERSION }}
+          enable-cache: true
+          cache-dependency-glob: "uv.lock"
 
       - name: Install dependencies
-        run: poetry install --no-root
+        run: uv sync --all-extras --dev
 
       - name: Build mkdocs
-        run: poetry run python -m mkdocs build -d dist
+        run: uv run mkdocs build -d dist
 
       - name: Setup GitHub Pages
         uses: actions/configure-pages@v4

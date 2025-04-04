@@ -1,19 +1,21 @@
 root = true
 
 [*]
-indent_style = tab
+indent_style = space
 indent_size = 4
-tab_width = 4
+insert_final_newline = true
+trim_trailing_whitespace = true
 end_of_line = lf
 charset = utf-8
-trim_trailing_whitespace = true
-insert_final_newline = true
 
-[*.{json,yaml,yml}]
-indent_style = space
+[{*.json,*.css,*.yaml,*.yml}]
 indent_size = 2
+insert_final_newline = unset
 
 [*.md]
-indent_style = space
 trim_trailing_whitespace = false
 max_line_length = 80
+
+# Makefiles always use tabs for indentation
+[Makefile]
+indent_style = tab
