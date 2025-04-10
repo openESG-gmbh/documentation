@@ -23,7 +23,7 @@ You can select from the following fields.
 * `organization_house_number`
 * `organization_zip_code`
 * `organization_city`
-* `organization_country` (must be one of the following: `AT`, `BE`, `CH`, `CZ`, `DE`, `DK`, `ES`, `FR`, `GB`, `HU`, `IT`, `LU`, `NL`, `PL`, `SE`, `TR`. Default: `DE`). Alternatively to the `code`, one can also pass the `name`, e.g. `Deutschland` instead of `DE` <!-- markdownlint-disable-line MD013 -->
+* `organization_country` (must be one of the following: `AT`, `BE`, `CH`, `CZ`, `DE`, `DK`, `ES`, `FR`, `GB`, `HU`, `IT`, `LU`, `NL`, `PL`, `SE`, `TR`. Default: `DE`. Alternatively to the `code`, one can also pass the `name`, e.g. `Deutschland` instead of `DE`) <!-- markdownlint-disable-line MD013 -->
 * `user_email`
 * `user_salutation` (must be one of the following: `dear_mr`, `dear_mrs`, `good_day`.) <!-- markdownlint-disable-line MD013 -->
 * `user_first_name`
@@ -38,12 +38,14 @@ You can select from the following fields.
 
 The delimiter should be a comma (`,`) or a semicolon (`;`).
 
-### Mandatory fields
+## CSV upload with pre-selected Report Template
+
+### Mandatory fields (pre-selected Report Template)
 
 * `organization_name`
 * `user_email`
 
-## Example
+### Example (pre-selected Report Template)
 
 Here is an example with three organizations:
 
@@ -52,4 +54,26 @@ organization_name,organization_legal_form,organization_vat_id,organization_email
 Test Customer,gmbh,DE123456789,test@customer.de,https://testcustomer.de,dear_mr,Max,Mustermann,max.mustermann@testcustomer.de,directly
 Test Company,ag,DE123456788,test@company.de,https://testcustomer.de,dear_mr,Max,Mustermann,max.mustermann@testcustomer.de,no_notification
 Test Company 2,ek-ohg,DE123456787,test@company2.de,https://testcomapny2.de,dear_mrs,Jane,Doe,jane.doe@testcompany2.de,directly
+```
+
+## General CSV upload
+
+The general CSV upload is based on the regular CSV upload but offers you the
+option to specify a Report Template per line
+
+### Mandatory fields (general CSV upload)
+
+* `organization_name`
+* `user_email`
+* `report_template` (must be either the ID or the key of the Report Template, e.g. `123` or `vsme`) <!-- markdownlint-disable-line MD013 -->
+
+### Example (general CSV upload)
+
+Here is an example with three organizations:
+
+```csv
+organization_name,organization_legal_form,organization_vat_id,organization_email,organization_homepage,user_salutation,user_first_name,user_last_name,user_email,provider_notification,report_template
+Test Customer,gmbh,DE123456789,test@customer.de,https://testcustomer.de,dear_mr,Max,Mustermann,max.mustermann@testcustomer.de,directly,11
+Test Company,ag,DE123456788,test@company.de,https://testcustomer.de,dear_mr,Max,Mustermann,max.mustermann@testcustomer.de,no_notification,vsme
+Test Company 2,ek-ohg,DE123456787,test@company2.de,https://testcomapny2.de,dear_mrs,Jane,Doe,jane.doe@testcompany2.de,directly,vsme
 ```
