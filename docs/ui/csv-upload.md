@@ -35,6 +35,9 @@ You can select from the following fields.
 * `personal_message`
 * `customer_identifier` (can be used to filter reports or report requests)
 * `proivder_notification` (must be one of the following: `directly`, `after_esg_risk_check`, `no_notification`. Default: `directly`) <!-- markdownlint-disable-line MD013 -->
+* `requestor_email` (if not provided, the upload user will be used; otherwise, it will be used to check for an existing user in the current organization. If no matching user is found, a new user in the current organization will be created.) <!-- markdownlint-disable-line MD013 -->
+* `requestor_first_name`
+* `requestor_last_name`
 
 The delimiter should be a comma (`,`) or a semicolon (`;`).
 
