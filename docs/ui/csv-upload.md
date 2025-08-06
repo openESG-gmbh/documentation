@@ -31,7 +31,6 @@ You can select from the following fields.
 * `user_phone`
 * `user_locale` (must be one of the following: `en_US`, `de_DE`, `fr_FR`, `es_ES` or `it_IT`. Default: `de_DE`) <!-- markdownlint-disable-line MD013 -->
 * `user_timezone` (must be one of the tz database, e.g. `Europe/Berlin`. Default: `UTC`) <!-- markdownlint-disable-line MD013 -->
-* `user_department`
 * `personal_message`
 * `submission_date` (must be in the ISO 8601 format (`YYYY-MM-DD`), e.g. `2024-10-01`.) <!-- markdownlint-disable-line MD013 -->
 * `creation_date` (must be in the ISO 8601 format (`YYYY-MM-DD`), e.g. `2024-10-01`. Default: current date time) <!-- markdownlint-disable-line MD013 -->
