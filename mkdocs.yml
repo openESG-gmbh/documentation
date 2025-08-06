@@ -3,7 +3,7 @@ site_url: https://docs.openesg.de
 site_description: openESG Technical Documentation
 site_author: openESG GmbH
 repo_url: https://github.com/openESG-gmbh/documentation
-copyright: Copyright &copy; 2024 openESG
+copyright: Copyright &copy; 2025 openESG
 edit_uri: edit/main/docs/
 
 nav:
@@ -42,6 +42,8 @@ theme:
     - toc.follow
   icon:
     repo: fontawesome/brands/github
+  palette:
+    primary: custom
 
 extra:
   generator: false
