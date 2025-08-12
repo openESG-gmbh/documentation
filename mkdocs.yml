@@ -11,7 +11,8 @@ nav:
   - Contact: https://openesg.de/kontakt/
   - Imprint: https://openesg.de/impressum/
   - REST API:
-      - Introduction: rest-api/index.md
+      - OpenAPI (Swagger): rest-api/index.md
+      - Structure: rest-api/structure.md
       - Authentication: rest-api/authentication.md
   - UI:
       - CSV Upload: ui/csv-upload.md
