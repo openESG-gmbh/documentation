@@ -39,6 +39,12 @@ You can select from the following fields.
 * `requestor_email` (if not provided, the upload user will be used; otherwise, it will be used to check for an existing user in the current organization. If no matching user is found, a new user in the current organization will be created.) <!-- markdownlint-disable-line MD013 -->
 * `requestor_first_name`
 * `requestor_last_name`
+* `requestor2_email` (If specified, the requestor user is granted additional access to the report request. If it doesn't exist, it will be created in the current organization.) <!-- markdownlint-disable-line MD013 -->
+* `requestor2_first_name`
+* `requestor2_last_name`
+* `requestor3_email` (If specified, the requestor user is granted additional access to the report request. If it doesn't exist, it will be created in the current organization.) <!-- markdownlint-disable-line MD013 -->
+* `requestor3_first_name`
+* `requestor3_last_name`
 
 The delimiter should be a comma (`,`) or a semicolon (`;`).
 
