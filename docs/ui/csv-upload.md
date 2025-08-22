@@ -23,7 +23,7 @@ You can select from the following fields.
 * `organization_house_number`
 * `organization_zip_code`
 * `organization_city`
-* `organization_country` (must be one of the following: `AT`, `BE`, `CH`, `CZ`, `DE`, `DK`, `ES`, `FR`, `GB`, `HU`, `IT`, `LU`, `NL`, `PL`, `SE`, `TR`. Default: `DE`. Alternatively to the `code`, one can also pass the `name`, e.g. `Deutschland` instead of `DE`) <!-- markdownlint-disable-line MD013 -->
+* `organization_country` (must be a ISO 3166-1 alpha-2 country code (e.g. `AT`, `CH`, `FR`). Default: `DE`.) <!-- markdownlint-disable-line MD013 -->
 * `user_email`
 * `user_salutation` (must be one of the following: `dear_mr`, `dear_mrs`, `good_day`.) <!-- markdownlint-disable-line MD013 -->
 * `user_first_name`
