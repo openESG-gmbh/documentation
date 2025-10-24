@@ -11,7 +11,7 @@ want to provide.
 You can select from the following fields.
 
 * `organization_name`
-* `organization_legal_form` (must be one of the following: `ab`, `adoer`, `ag`, `eg`, `ek`, `ek-ohg`, `gbr`, `gmbh`, `gmbh-co-kg`, `kg`, `kdoer`, `ltd`, `ohg`, `other`, `part-gmbb`, `partg`, `se`, `se-co-kg`, `sole-proprietorship`, `stiftung`, `stiftung-co-kg`, `ug`, `ug-co-kg`. Default: `gmbh`). Alternatively to the `key`, one can also pass the `name`, e.g. `GmbH` instead of `gmbh`  <!-- markdownlint-disable-line MD013 -->
+* `organization_legal_form` (must be one of the following: `ab`, `adoer`, `ag`, `eg`, `ek`, `ek-ohg`, `gbr`, `gmbh`, `gmbh-co-kg`, `kg`, `kdoer`, `ltd`, `ohg`, `other`, `part-gmbb`, `partg`, `se`, `se-co-kg`, `sole-proprietorship`, `stiftung`, `stiftung-co-kg`, `ug`, `ug-co-kg`, `natural_person`. Default: `gmbh`). Alternatively to the `key`, one can also pass the `name`, e.g. `GmbH` instead of `gmbh`  <!-- markdownlint-disable-line MD013 -->
 * `organization_vat_id`
 * `organization_court_of_registration`
 * `organization_commercial_register_number`
@@ -32,6 +32,7 @@ You can select from the following fields.
 * `user_locale` (must be one of the following: `en_US`, `de_DE`, `fr_FR`, `es_ES` or `it_IT`. Default: `de_DE`) <!-- markdownlint-disable-line MD013 -->
 * `user_timezone` (must be one of the tz database, e.g. `Europe/Berlin`. Default: `UTC`) <!-- markdownlint-disable-line MD013 -->
 * `personal_message`
+* `reason` (will be part of a Report to distinguish the purpose of the report)
 * `submission_date` (must be in the ISO 8601 format (`YYYY-MM-DD`), e.g. `2024-10-01`.) <!-- markdownlint-disable-line MD013 -->
 * `creation_date` (must be in the ISO 8601 format (`YYYY-MM-DD`), e.g. `2024-10-01`. Default: current date time) <!-- markdownlint-disable-line MD013 -->
 * `customer_identifier` (can be used to filter reports or report requests)
